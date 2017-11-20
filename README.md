@@ -1,5 +1,8 @@
 # react-native-feedback
 
+#### 基于阿里云封装的App反馈平台，【一行代码，双平台反馈】
+
+
 【 Android 平台配置 】
 
 1. 添加依赖文件
@@ -53,6 +56,7 @@ import {
 
 2. 打开反馈界面
 ```javascript
-NativeModules.feedbackModule.openFeedbackActivity(null)  
-openFeedbackActivity方法中可以传递json对象，用于向反馈平台传递额外参数信息。没有，传null即可。
+// openFeedbackActivity方法中可以传递json对象，用于向反馈平台传递额外参数信息。没有，传null即可。
+NativeModules.feedbackModule.openFeedbackActivity(null) 
+
 ```
