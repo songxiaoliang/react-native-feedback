@@ -56,7 +56,12 @@ import {
 
 2. 打开反馈界面
 ```javascript
-// openFeedbackActivity方法中可以传递json对象，用于向反馈平台传递额外参数信息。没有，传null即可。
-NativeModules.feedbackModule.openFeedbackActivity(null) 
+// openFeedbackActivity方法中可以传递json对象，用于向反馈平台传递额外参数信息。例如，传递设备信息：
+let phone = {
+  platform: 'android'
+}
+NativeModules.feedbackModule.openFeedbackActivity(phone) 
 
+没有则传null即可。
+NativeModules.feedbackModule.openFeedbackActivity(null) 
 ```
