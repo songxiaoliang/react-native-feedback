@@ -36,14 +36,16 @@ public class FeedBackModule extends ReactContextBaseJavaModule {
      */
     @ReactMethod
     public void openFeedbackActivity(ReadableMap poiData) {
-        if(poiData != null) {
+       if(poiData != null) {
             JSONObject jsonObject = new JSONObject();
-            try {
-                jsonObject.put(Constant.POI_ID, poiData.getString(Constant.POI_ID));
-                jsonObject.put(Constant.PLAN_ID, poiData.getString(Constant.PLAN_ID));
-                jsonObject.put(Constant.DAY, poiData.getString(Constant.DAY));
-            } catch (JSONException e) {
-                e.printStackTrace();
+            ReadableMapKeySetIterator iterator = poiData.keySetIterator();
+            while (iterator.hasNextKey()) {
+                String key = iterator.nextKey();
+                try {
+                    jsonObject.put(key, poiData.getString(key));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
             }
             FeedbackAPI.setAppExtInfo(jsonObject);
         } else {
