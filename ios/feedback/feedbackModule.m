@@ -20,9 +20,9 @@ RCT_EXPORT_METHOD(openFeedbackActivity:(NSDictionary *)POiData) {
 - (void)openFeedbackViewController:(NSDictionary*)POiData {
 
   if (POiData != nil) {
-    self.feedbackKit.extInfo = @{@"poiId":POiData[@"poiId"],
-                                 @"planId":POiData[@"planId"],
-                                 @"schedulePoiId":POiData[@"schedulePoiId"]};
+    self.feedbackKit.extInfo = POiData;
+  }else {
+    self.feedbackKit.extInfo = nil;
   }
   
   AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
