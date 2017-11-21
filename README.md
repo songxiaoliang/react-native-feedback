@@ -62,6 +62,6 @@ let phone = {
 }
 NativeModules.feedbackModule.openFeedbackActivity(phone) 
 
-没有则传null即可。
+// 没有 则传null即可。
 NativeModules.feedbackModule.openFeedbackActivity(null) 
 ```
