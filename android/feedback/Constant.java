@@ -1,7 +1,7 @@
 package com.uniapp.feedback;
 
 /**
- * 反馈POI数据
+ * 反馈数据
  * Created by Song on 2017/11/15.
  */
 public class Constant {
