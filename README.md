@@ -44,7 +44,7 @@ SystemConfiguration.framework
 ```
 （3）将ios_feedback文件夹添加到工程中
 
-（4）打开，将key和secret修改成自己申请的即可
+（4）打开 feedback/feedbackModule.m 文件，将key和secret修改成自己申请的即可
 ```xml
 static NSString * const kAppKey = @"24697423"; // 改成自己申请的
 static NSString * const kAppSecret = @"2ca83fb8533436a37adef002750c4dbd";// 改成自己申请的
